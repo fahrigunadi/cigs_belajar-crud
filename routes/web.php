@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnakController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,6 +20,8 @@ Route::put('anak/{anak}', [AnakController::class, 'update'])->name('anak.update'
 
 Route::delete('anak/{anak}', [AnakController::class, 'destroy'])->name('anak.destroy');
 
+
+Route::resource('users', UserController::class);
 // Route::get();
 // Route::post();
 // Route::put();
